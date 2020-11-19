@@ -40,6 +40,11 @@ while (i < 9) {
   HELPdebt = Math.round(HELPdebt - (currentWage * HELPrepayment));
   if (HELPdebt < 0) {
     console.log(`It took ${i} years to repay back the help debt.`)
+    
+    var para = document.createElement("p");
+    var node = document.createTextNode(`It will take ${i+1} years to repay the HELP debt entirely.`);
+    para.appendChild(node);
+    
     break;
   }
   console.log(`Year ${i} (202${i}) debt - $${HELPdebt}`);
